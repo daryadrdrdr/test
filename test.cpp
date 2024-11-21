@@ -25,7 +25,6 @@ int main()
 	}
 	sort(plot.begin(), plot.end());
 	sort(mesk.begin(), mesk.end());
-
 	k = 0;
 	i = plot.size() - 1;
 	j = mesk.size() - 1;
@@ -40,5 +39,6 @@ int main()
 		else
 			j--;
 	}
+<<<<<<< HEAD
 	cout << k << endl;
 }

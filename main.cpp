@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	long long n, m, i, j, kostik;
+	long long n, m, i, j, kos;
 	cin >> n >> m;
 	vector < long long > plot, mesk;
 
@@ -16,8 +16,9 @@ int main()
 			cin >> x;
 			plot.push_back(x);
 		}
-	cin >> kostik;
-	for (i = 0; i < kostik; i++)
+	cin >> kos;
+	for (i = 0; i < kos; i++)
+
 	{
 		long long x;
 		cin >> x;
@@ -25,20 +26,19 @@ int main()
 	}
 	sort(plot.begin(), plot.end());
 	sort(mesk.begin(), mesk.end());
-
-	kostik = 0;
+	kos = 0;
 	i = plot.size() - 1;
 	j = mesk.size() - 1;
 	while ((i + 1) * (j + 1) > 0)
 	{
 		if (plot[i] >= mesk[j])
 		{
-			kostik++;
+			kos++;
 			i--;
 			j--;
 		}
 		else
 			j--;
 	}
-	cout << kostik << endl;
+	cout << kos << endl;
 }
